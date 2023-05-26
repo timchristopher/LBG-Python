@@ -211,12 +211,12 @@ def delete_one(_id):
 if __name__ == '__main__':
     # set up the app with listening socket for http requests and appropriate hostname
     parser = argparse.ArgumentParser()
-    parser.add_argument("--HOST", default="0.0.0.0")
+    parser.add_argument("--PYTHON_HOST", default="0.0.0.0")
     parser.add_argument("--PORT", default=getenv('PORT'))
 
     args = parser.parse_args()
+    HOST = args.PYTHON_HOST
     PORT = args.PORT
-    HOST = args.HOST
 
     # get app to serve
     print(f'API Listening on http://{HOST}:{PORT}')
