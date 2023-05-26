@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  lbg-python:
+    build: .
+    image: lbg-python-app:v1
+    environment:
+      - PORT=${PORT}
+    ports:
+      - published: ${PORT}
+        target: ${PORT}
+        protocol: tcp
+    networks:
+      - lbg-net
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - type: bind
+        source: ./nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
+    networks:
+      - lbg-net
+    ports:
+      - published: 80
+        target: 80
+        protocol: tcp
+    depends_on:
+      - lbg-python
+networks:
+  lbg-net:
