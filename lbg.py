@@ -211,8 +211,7 @@ def delete_one(_id):
 if __name__ == '__main__':
     # set up the app with listening socket for http requests and appropriate hostname
     parser = argparse.ArgumentParser()
-    #parser.add_argument("--PORT", default=getenv('LBG_PYTHON_PORT'))
-    parser.add_argument("--PORT", default="8080")
+    parser.add_argument("--PORT", default=getenv('PORT'))
     args = parser.parse_args()
 
     PORT = args.PORT
