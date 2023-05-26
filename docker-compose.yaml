@@ -5,6 +5,10 @@ services:
     image: lbg-python-app:v1
     environment:
       - PORT=${PORT}
+    ports:
+      - published: ${PORT}
+        target: ${PORT}
+        protocol: tcp
     networks:
       - lbg-net
   nginx:
