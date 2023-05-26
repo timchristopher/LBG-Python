@@ -15,6 +15,7 @@ services:
     image: nginx:alpine
     environment:
       - PORT=${PORT}
+      - SERVICE=lbg-python
     volumes:
       - type: bind
         source: ./nginx/nginx.conf
