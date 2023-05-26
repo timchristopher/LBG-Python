@@ -1,4 +1,4 @@
-# Use Python 3.6 or later as a base image
+# Use Python as a base image
 FROM python:3.11.3
 
 # Copy contents into image
