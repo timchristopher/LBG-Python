@@ -9,7 +9,7 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Set environment variables
-env LBG_PYTHON_PORT=80
+env LBG_PYTHON_PORT=5000
 
 # Expose the correct port
 EXPOSE 5000
