@@ -13,6 +13,8 @@ services:
       - lbg-net
   nginx:
     image: nginx:alpine
+    environment:
+      - PORT=${PORT}
     volumes:
       - type: bind
         source: ./nginx/nginx.conf
