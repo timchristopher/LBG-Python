@@ -5,6 +5,10 @@ pipeline {
         booleanParam(name: 'skip_run', defaultValue: false, description: 'Set to false to run the application')
     }
 
+    environment {
+        PORT = 5000
+    }
+
     stages {
         stage('Pre-build Cleanup') {
             steps {
