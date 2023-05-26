@@ -216,7 +216,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     PORT = args.PORT
-    HOST = 'localhost'
+    HOST = '0.0.0.0'
 
     # get app to serve
     print(f'API Listening on http://{HOST}:{PORT}')
