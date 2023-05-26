@@ -4,7 +4,7 @@ services:
     build: .
     image: lbg-python-app:v1
     environment:
-      - PORT=$PORT
+      - PORT=5001
     networks:
       - lbg-net
   nginx:
