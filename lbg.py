@@ -212,9 +212,9 @@ if __name__ == '__main__':
     # set up the app with listening socket for http requests and appropriate hostname
     parser = argparse.ArgumentParser()
     
-    printf('*****************')
-    printf(getenv('PORT'))
-    printf('^^^^^^^^^^^^^^^^^')
+    print('*****************')
+    print(getenv('PORT'))
+    print('^^^^^^^^^^^^^^^^^')
     
     parser.add_argument("--PORT", default=getenv('PORT'))
     args = parser.parse_args()
