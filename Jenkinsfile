@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        PORT = 5001
+        PORT = "5001"
     }
 
     stages {
