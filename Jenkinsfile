@@ -2,7 +2,7 @@ pipeline {
     agent any
    
     parameters {
-        booleanParam(name: 'run_app', defaultValue: true, description: 'Set to true to run the application')
+        booleanParam(name: 'run_app', defaultValue: true, description: 'Set to true to run the application and tests')
     }
 
     environment {
@@ -39,6 +39,7 @@ pipeline {
             }
         }
         stage('Test') {
+            when { expression { params.run_app == true } }
             steps {
                 echo 'Test'
                 sh 'python3 lbg.test.py'
