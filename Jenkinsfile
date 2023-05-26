@@ -2,7 +2,7 @@ pipeline {
     agent any
    
     parameters {
-        booleanParam(name: 'skip_run', defaultValue: false, description: 'Set to false to run the application')
+        booleanParam(name: 'run_app', defaultValue: true, description: 'Set to true to run the application')
     }
 
     environment {
@@ -30,7 +30,7 @@ pipeline {
             }
         }
         stage('Run') {
-            when { expression { params.skip_run != true } }
+            when { expression { params.run_app == true } }
             steps {
                 echo 'Run'
                 sh '''
