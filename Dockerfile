@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
  
 # Install pip dependencies from requirements
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt --break-system-packages
 
 # Set environment variables
 env LBG_PYTHON_PORT=80
