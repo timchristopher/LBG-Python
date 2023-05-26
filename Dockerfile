@@ -9,10 +9,10 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Set environment variables
-env LBG_PYTHON_PORT=5000
+#env LBG_PYTHON_PORT=5000
 
 # Expose the correct port
 EXPOSE 5000
 
 # Create an entrypoint
-ENTRYPOINT ["python3", "lbg.py"]
+ENTRYPOINT ["python", "lbg.py"]
