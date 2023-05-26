@@ -12,7 +12,7 @@ RUN pip install -r requirements.txt
 env LBG_PYTHON_PORT=80
 
 # Expose the correct port
-EXPOSE 80
+EXPOSE 5000
 
 # Create an entrypoint
 ENTRYPOINT ["python3", "lbg.py"]
