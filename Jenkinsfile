@@ -40,7 +40,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test'
-                sh 'python3 lbg.test.py 5000'
+                sh 'python3 lbg.test.py'
             }
         }
     }
