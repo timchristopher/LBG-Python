@@ -16,4 +16,4 @@ EXPOSE ${PORT}
 
 # Create an entrypoint
 #ENTRYPOINT ["python", "lbg.py"]
-ENTRYPOINT python3 lbg.py --PORT ${PORT}
+ENTRYPOINT python3 lbg.py --HOST localhost --PORT ${PORT}
