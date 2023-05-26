@@ -17,7 +17,7 @@ services:
       - lbg-net
     ports:
       - published: 80
-        target: 5000
+        target: 80
         protocol: tcp
     depends_on:
       - lbg-python
