@@ -36,6 +36,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test'
+                sh 'python lbg.test.py'
             }
         }
     }
