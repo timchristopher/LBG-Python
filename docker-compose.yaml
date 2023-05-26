@@ -5,7 +5,6 @@ services:
     image: lbg-python-app:v1
     environment:
       - PORT=${PORT}
-      - PYTHON_HOST=${PYTHON_HOST}
     ports:
       - published: ${PORT}
         target: ${PORT}
