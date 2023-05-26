@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         PORT = "5005"
-        PYTHON_HOST = "localhost"
+        PYTHON_HOST = "0.0.0.0"
     }
 
     stages {
