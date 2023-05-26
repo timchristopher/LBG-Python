@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
  
 # Install pip dependencies from requirements
-RUN pip3 install -r requirements.txt --break-system-packages
+RUN pip3 install -r requirements.txt
 
 # Set environment variables
 env LBG_PYTHON_PORT=80
@@ -15,4 +15,4 @@ env LBG_PYTHON_PORT=80
 EXPOSE 80
 
 # Create an entrypoint
-ENTRYPOINT ["python3", "app.py"]
+ENTRYPOINT ["python3", "lbg.py"]
