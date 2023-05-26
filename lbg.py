@@ -16,6 +16,9 @@ from flask_api import status
 from models import db, ItemModel
 from sqlalchemy import exc
 
+# Provide access to environment variables
+from os import getenv
+
 # JavaScript/ES6 text/plain MIME Content type fix (avoids registry hack!)
 import mimetypes
 mimetypes.add_type('text/javascript', '.js')
@@ -208,7 +211,7 @@ def delete_one(_id):
 if __name__ == '__main__':
     # set up the app with listening socket for http requests and appropriate hostname
     parser = argparse.ArgumentParser()
-    parser.add_argument("--PORT", default="8080")
+    parser.add_argument("--PORT", default=getenv('LBG_PYTHON_PORT'))
     args = parser.parse_args()
 
     PORT = args.PORT
