@@ -8,7 +8,7 @@ COPY . .
 # Install pip dependencies from requirements
 RUN pip3 install -r requirements.txt
 
-# Set YOUR_NAME environment variable
+# Set environment variables
 env LBG_PYTHON_PORT=80
 
 # Expose the correct port
